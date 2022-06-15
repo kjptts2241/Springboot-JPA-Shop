@@ -27,6 +27,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Builder
 @Entity
+// 게시판
 public class Board {
 	
 	@Id //Primary key
@@ -43,6 +44,7 @@ public class Board {
 	private int count; // 조회수
 	
 	// 자바에서는 객체를 저장 할 수 있지만 DB에는 객체를 저장할 방법이 없기에 JoinColumn으로 필드값을 만들고 ManyToOne로 연관 관계를 만든다. 
+	// fetch = FetchType에서 EAGER는 USER 객체를 자동으로 가져오지만 LAZY는 안들고 온다.
 	@ManyToOne(fetch = FetchType.EAGER) // Many = Board, User = One 한명의 유저는 여러개의 게시글을 쓸 수 있다.
 	@JoinColumn(name="userId") // DB에 만들어질때는 User객체의 FK로 userId라는 필드값이 만들어 진다. // User객체의 id를 참조하기에 int 값이다
 	private User user; // 게시글을 누가 적었는지 // User객체를 참조한다.

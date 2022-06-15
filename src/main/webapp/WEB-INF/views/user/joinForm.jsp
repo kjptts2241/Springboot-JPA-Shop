@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
-<%@ include file="layout/header.jsp"%>
+<%@ include file="../layout/header.jsp"%>
 
 <div class="container">
 
@@ -10,11 +10,11 @@
 		</div>
 		
 		<div class="mb-3">
-			<label for="email" class="form-label">Email</label> <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+			<label for=password class="form-label">Password</label> <input type="password" class="form-control" id="password">
 		</div>
 		
 		<div class="mb-3">
-			<label for=password class="form-label">Password</label> <input type="password" class="form-control" id="password">
+			<label for="email" class="form-label">Email</label> <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
 		</div>
 	</form>
 	<button id="btn-save" class="btn btn-primary">회원가입</button>
@@ -22,6 +22,4 @@
 </div>
 
 <script src="/js/user.js"></script>
-<%@ include file="layout/footer.jsp"%>
-
-
+<%@ include file="../layout/footer.jsp"%>

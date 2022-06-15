@@ -22,6 +22,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Builder
 @Entity
+// 게시판 댓글
 public class Reply {
 	
 	@Id //Primary key

@@ -4,3 +4,5 @@ package com.cos.flower.model;
 public enum RoleType {
 	USER, ADMIN
 }
+
+
